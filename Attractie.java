@@ -7,7 +7,7 @@ public class Attractie {
 	int aantalKeerDraaien;
 	int aantalKaartjes;
 	double omzet;
-	Kassa kassa = new Kassa();
+	static final Kassa kassa = new Kassa();
 	
 	
 	Attractie(String naam, double prijs, int oppervlakte) {
@@ -25,12 +25,9 @@ public class Attractie {
 
 	public void kaartVerkoop() {
 		this.aantalKaartjes++;
-		this.omzet = aantalKaartjes + prijs;
-//		System.out.println("deze attractie heeft zoveel kaartjes verkocht: " + this.aantalKaartjes);
-//		System.out.println("de omzet van deze attractie is " + this.omzet  );
-
+		this.omzet = omzet + prijs;
 		kassa.verhoogAantalKaartjes();
-		kassa.verhoogTotaleOmzet();
+		kassa.verhoogTotaleOmzet(prijs);
 		kassa.toonOmzetOfKaartverkoop();
 
 	}

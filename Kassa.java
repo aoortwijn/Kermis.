@@ -14,8 +14,8 @@ public class Kassa{
 		return totaalAantalKaartjes;
 	}
 	
-	public void verhoogTotaleOmzet() {
-		
+	public void verhoogTotaleOmzet(double geld) {
+		this.totaleOmzetKermis = totaleOmzetKermis + geld;
 	}
 	
 	public void verhoogAantalKaartjes() {
@@ -26,11 +26,7 @@ public class Kassa{
 //		totaleOmzetKermis = totaleOmzetKermis + omzet;
 //		System.out.println("De totale omzet van de kermis is: " + totaleOmzetKermis);
 //	}
-//
-//	public void toonKaartVerkoopKermis(int kaartjes) {
-//		totaalAantalKaartjes = totaalAantalKaartjes + kaartjes;
-//		System.out.println("Er zijn in totaal zoveel kaartjes verkocht: " + totaalAantalKaartjes);
-//	}
+
 
 	public void toonOmzetOfKaartverkoop() {
 		Scanner scanner = new Scanner(System.in);
