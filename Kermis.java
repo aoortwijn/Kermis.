@@ -14,11 +14,8 @@ public class Kermis {
 	Attractie hawaii = new Hawaii("Hawaii", 2.90, 0);
 	Attractie ladderklimmen = new Ladderklimmen("Ladderklimmen", 5.00, 0);
 
-//	double totaleOmzet;
-//	totaleOmzetBijwerken();
-//	int totaalAantalKaartjes;
-//	totaalKaartjesBijwerken();
-
+	
+	
 	public static void main(String[] args) {
 		Kermis kermis = new Kermis();
 

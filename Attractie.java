@@ -8,8 +8,7 @@ public class Attractie {
 	int aantalKaartjes;
 	double omzet;
 	static final Kassa kassa = new Kassa();
-	
-	
+
 	Attractie(String naam, double prijs, int oppervlakte) {
 		this.naam = naam;
 		this.prijs = prijs;
@@ -26,6 +25,8 @@ public class Attractie {
 	public void kaartVerkoop() {
 		this.aantalKaartjes++;
 		this.omzet = omzet + prijs;
+//		System.out.println(naam + " heeft zoveel kaartjes verkocht:" + aantalKaartjes);
+//		System.out.println(naam + " heeft zoveel omzet:" + omzet);
 		kassa.verhoogAantalKaartjes();
 		kassa.verhoogTotaleOmzet(prijs);
 		kassa.toonOmzetOfKaartverkoop();
@@ -33,15 +34,13 @@ public class Attractie {
 	}
 }
 
-
-
 class Botsauto extends Attractie {
 	public Botsauto(String naam, double prijs, int oppervlakte) {
 		super(naam, prijs, oppervlakte);
 	}
 }
 
-class Spin extends Attractie {
+class Spin extends RisicoRijkeAttracties {
 	public Spin(String naam, double prijs, int oppervlakte) {
 		super(naam, prijs, oppervlakte);
 	}
@@ -59,7 +58,7 @@ class Spookhuis extends Attractie {
 	}
 }
 
-class Hawaii extends Attractie {
+class Hawaii extends RisicoRijkeAttracties {
 	public Hawaii(String naam, double prijs, int oppervlakte) {
 		super(naam, prijs, oppervlakte);
 	}
